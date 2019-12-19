@@ -1,0 +1,40 @@
+{
+    "name": "Black Knight",
+    "description": "Black Knight is a leading provider of integrated technology and services that span the entire mortgage and real estate continuum.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28210-www-blackknightinc-com.jpg",
+    "tags": [
+        "agencies",
+        "have api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/black-knight\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Black Knight",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28210-www-blackknightinc-com.jpg",
+            "humanURL": "https:\/\/www.blackknightinc.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/black-knight-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/Black_KnightInc"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.blackknightinc.com"
+        }
+    ]
+}
