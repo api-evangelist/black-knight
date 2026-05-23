@@ -1,0 +1,14 @@
+{
+  "lockId": "OB-LOCK-2026-05-22-44217",
+  "loanNumber": "0012345678",
+  "productCode": "FNMA-CONV-30YR-FRM",
+  "investorName": "Fannie Mae",
+  "lockedRate": 6.625,
+  "lockedPrice": 100.125,
+  "discountPoints": 0.0,
+  "lockDate": "2026-05-22T17:04:21Z",
+  "lockExpiration": "2026-06-21",
+  "lockPeriodDays": 30,
+  "status": "Active",
+  "extensions": []
+}

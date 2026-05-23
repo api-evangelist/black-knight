@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-knight/main/json-schema/optimal-blue-lock-schema.json",
+  "title": "Optimal Blue Rate Lock",
+  "description": "Rate-lock record created or managed through the Optimal Blue PPE / lock-desk APIs.",
+  "type": "object",
+  "required": ["lockId", "loanNumber", "lockedRate", "lockExpiration"],
+  "properties": {
+    "lockId": { "type": "string" },
+    "loanNumber": { "type": "string" },
+    "productCode": { "type": "string" },
+    "investorName": { "type": "string" },
+    "lockedRate": { "type": "number" },
+    "lockedPrice": { "type": "number" },
+    "discountPoints": { "type": "number" },
+    "lockDate": { "type": "string", "format": "date-time" },
+    "lockExpiration": { "type": "string", "format": "date" },
+    "lockPeriodDays": { "type": "integer" },
+    "status": {
+      "type": "string",
+      "enum": ["Active", "Expired", "Cancelled", "Funded", "Re-Locked", "Extended", "Worst Case Priced"]
+    },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "days": { "type": "integer" },
+          "feeBps": { "type": "number" },
+          "extendedOn": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

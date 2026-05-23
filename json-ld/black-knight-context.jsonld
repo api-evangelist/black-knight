@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "@vocab": "https://raw.githubusercontent.com/api-evangelist/black-knight/main/json-ld/black-knight-context.jsonld#",
+    "schema": "https://schema.org/",
+    "fibo": "https://spec.edmcouncil.org/fibo/ontology/",
+    "id": "@id",
+    "type": "@type",
+
+    "BlackKnight": "schema:Organization",
+    "ICEMortgageTechnology": "schema:Organization",
+    "OptimalBlue": "schema:Organization",
+    "ConstellationSoftware": "schema:Organization",
+
+    "MSP": {
+      "@id": "fibo:LoanServicingPlatform",
+      "@type": "schema:SoftwareApplication"
+    },
+    "LoanSphere": {
+      "@id": "fibo:DefaultManagementSuite",
+      "@type": "schema:SoftwareApplication"
+    },
+    "Empower": {
+      "@id": "fibo:LoanOriginationSystem",
+      "@type": "schema:SoftwareApplication"
+    },
+    "Encompass": {
+      "@id": "fibo:LoanOriginationSystem",
+      "@type": "schema:SoftwareApplication"
+    },
+    "OptimalBluePPE": {
+      "@id": "fibo:ProductPricingEngine",
+      "@type": "schema:SoftwareApplication"
+    },
+    "Resitrader": {
+      "@id": "fibo:LoanTradingPlatform",
+      "@type": "schema:SoftwareApplication"
+    },
+
+    "Loan": "fibo:Loan",
+    "MortgageLoan": "fibo:MortgageLoan",
+    "Borrower": "fibo:Borrower",
+    "Investor": "fibo:Investor",
+    "Servicer": "fibo:Servicer",
+    "Originator": "fibo:Originator",
+    "PromiseToPay": "fibo:PromiseToPay",
+    "RateLock": "fibo:RateLock",
+    "EscrowItem": "fibo:EscrowItem",
+    "Payment": "fibo:Payment",
+
+    "loanNumber": "schema:identifier",
+    "investorLoanNumber": "schema:identifier",
+    "principalBalance": {
+      "@id": "fibo:hasPrincipalBalance",
+      "@type": "schema:MonetaryAmount"
+    },
+    "interestRate": "fibo:hasInterestRate",
+    "lockedRate": "fibo:hasLockedRate",
+    "lockExpiration": {
+      "@id": "fibo:hasLockExpiration",
+      "@type": "schema:Date"
+    },
+    "delinquencyDays": "fibo:hasDelinquencyDays",
+    "status": "schema:status",
+
+    "acquiredBy": "schema:parentOrganization",
+    "divestedTo": "schema:owner",
+    "acquisitionDate": {
+      "@id": "schema:dissolutionDate",
+      "@type": "schema:Date"
+    },
+    "acquisitionPrice": {
+      "@id": "schema:price",
+      "@type": "schema:MonetaryAmount"
+    }
+  }
+}

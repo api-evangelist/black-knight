@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-knight/main/json-schema/msp-escrow-schema.json",
+  "title": "MSP Escrow Item",
+  "description": "Escrow disbursement / collection item under the MSP escrow management APIs.",
+  "type": "object",
+  "required": ["loanNumber", "escrowType", "amount"],
+  "properties": {
+    "loanNumber": { "type": "string" },
+    "escrowType": {
+      "type": "string",
+      "enum": ["Hazard Insurance", "Flood Insurance", "Property Tax", "MIP", "PMI", "HOA"],
+      "description": "Escrow line-item category."
+    },
+    "amount": {
+      "type": "number",
+      "description": "Disbursement or collection amount in USD."
+    },
+    "disbursementDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "payee": {
+      "type": "string",
+      "description": "Tax authority or insurance carrier name."
+    },
+    "cushion": {
+      "type": "number",
+      "description": "RESPA cushion in months."
+    },
+    "analysisDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last escrow analysis."
+    }
+  }
+}

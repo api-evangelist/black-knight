@@ -1,0 +1,43 @@
+{
+  "searchId": "OB-PPE-2026-05-22-9981772",
+  "loanAmount": 425000,
+  "propertyValue": 530000,
+  "ltv": 80.19,
+  "creditScore": 745,
+  "occupancy": "Primary",
+  "propertyType": "SFR",
+  "loanPurpose": "Purchase",
+  "lockDays": 30,
+  "scenarios": [
+    {
+      "productCode": "FNMA-CONV-30YR-FRM",
+      "productName": "Fannie Mae Conventional 30-Yr Fixed",
+      "investorName": "Fannie Mae",
+      "rate": 6.625,
+      "price": 100.125,
+      "discountPoints": 0.0,
+      "lockPeriodDays": 30,
+      "compensation": "LPC"
+    },
+    {
+      "productCode": "FHLMC-CONV-30YR-FRM",
+      "productName": "Freddie Mac Conventional 30-Yr Fixed",
+      "investorName": "Freddie Mac",
+      "rate": 6.500,
+      "price": 99.875,
+      "discountPoints": 0.125,
+      "lockPeriodDays": 30,
+      "compensation": "LPC"
+    },
+    {
+      "productCode": "FHA-30YR-FRM",
+      "productName": "FHA 30-Yr Fixed",
+      "investorName": "Ginnie Mae",
+      "rate": 6.250,
+      "price": 100.500,
+      "discountPoints": 0.0,
+      "lockPeriodDays": 30,
+      "compensation": "LPC"
+    }
+  ]
+}

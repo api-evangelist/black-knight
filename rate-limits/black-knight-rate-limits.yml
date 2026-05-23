@@ -1,0 +1,57 @@
+specification: API Commons Rate Limits 0.1
+name: Black Knight / ICE Mortgage Technology Rate Limits
+description: >-
+  Rate-limit posture for MSP DX, Encompass Developer Connect, and Optimal Blue
+  APIs. Specific numeric thresholds for MSP DX and Encompass are not published
+  on the public developer portals — they are governed by partner / ISV
+  agreements. Optimal Blue publishes performance targets ("search request
+  average < 1 sec", "processing millions of calls daily") rather than per-key
+  quotas. This document captures the shape of the rate-limit regime.
+provider:
+  name: ICE Mortgage Technology
+  url: https://mortgagetech.ice.com
+created: '2026-05-23'
+modified: '2026-05-23'
+
+surfaces:
+  - id: msp-dx
+    name: MSP DX (Direct Exchange) APIs
+    documented: false
+    description: >-
+      Per-partner concurrency and TPS limits negotiated in the ISV / API partner
+      agreement. Not exposed on the public developer portal.
+    enforcement: Partner agreement
+    headers:
+      - X-RateLimit-Limit (not standardized publicly)
+      - X-RateLimit-Remaining (not standardized publicly)
+
+  - id: encompass-developer-connect
+    name: Encompass Developer Connect
+    documented: false
+    description: >-
+      Per-instance and per-partner limits governed by OAuth scopes and ISV
+      contract. Webhook subscriptions throttled per-resource.
+    enforcement: OAuth scope + partner contract
+    notes:
+      - Webhook delivery uses retry-with-backoff on partner-side failures
+
+  - id: optimal-blue-ppe
+    name: Optimal Blue PPE & Lock Desk
+    documented: partial
+    description: >-
+      No per-key quota published. Optimal Blue advertises platform-level SLOs:
+      search average under 1 second and processing of millions of calls daily.
+    serviceLevelObjectives:
+      - "Search Request Average < 1 sec"
+      - "Processing millions of calls daily"
+    enforcement: Service-level objective; partner contract
+
+policy:
+  generalPattern: >-
+    Across all ICE Mortgage Technology / Optimal Blue surfaces, rate limits are
+    contractual and negotiated rather than self-serve. Public portals do not
+    publish numeric per-key thresholds; partners receive limits as part of
+    onboarding.
+  backoffGuidance: >-
+    Exponential backoff with jitter on 429 / 503. Idempotency keys recommended
+    on payment posting and lock creation to make retries safe.

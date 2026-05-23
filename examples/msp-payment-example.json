@@ -1,0 +1,14 @@
+{
+  "paymentId": "PMT-2026-05-22-000871234",
+  "loanNumber": "0012345678",
+  "amount": 2148.92,
+  "principalAmount": 712.18,
+  "interestAmount": 1021.05,
+  "escrowAmount": 415.69,
+  "lateChargeAmount": 0.00,
+  "otherAmount": 0.00,
+  "effectiveDate": "2026-05-22",
+  "postDate": "2026-05-22T14:32:11Z",
+  "paymentMethod": "ACH",
+  "reversal": false
+}

@@ -1,0 +1,26 @@
+{
+  "loanNumber": "0012345678",
+  "investorLoanNumber": "FNMA-9876543210",
+  "productCode": "FNMA-CONV-30YR-FRM",
+  "borrower": {
+    "firstName": "Maria",
+    "lastName": "Gonzalez",
+    "taxIdLast4": "4421"
+  },
+  "propertyAddress": {
+    "street": "1847 Magnolia Lane",
+    "city": "Jacksonville",
+    "state": "FL",
+    "postalCode": "32256"
+  },
+  "originationDate": "2021-06-18",
+  "originalAmount": 412000.00,
+  "principalBalance": 392145.78,
+  "interestRate": 3.125,
+  "nextPaymentDueDate": "2026-06-01",
+  "escrowBalance": 4218.55,
+  "investorCode": "FNMA",
+  "servicerCode": "BKMSP-0042",
+  "status": "Active",
+  "delinquencyDays": 0
+}

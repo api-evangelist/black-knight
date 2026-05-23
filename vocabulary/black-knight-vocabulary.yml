@@ -1,0 +1,121 @@
+name: Black Knight / ICE Mortgage Technology Vocabulary
+description: >-
+  Domain vocabulary covering Black Knight's mortgage technology product lines, the
+  ICE acquisition (Sept 2023), and the Optimal Blue divestiture to Constellation
+  Software. Spans loan servicing (MSP), default management (LoanSphere), loan
+  origination (Empower / Encompass), and secondary marketing (Optimal Blue PPE).
+created: '2026-05-23'
+modified: '2026-05-23'
+
+terms:
+  - term: MSP
+    longForm: Mortgage Servicing Platform
+    definition: >-
+      Black Knight's mainframe-rooted system-of-record for loan servicing — the
+      historically dominant platform on which the majority of US first mortgages
+      are serviced. Now owned by ICE Mortgage Technology.
+    category: Product
+
+  - term: MSP DX
+    longForm: MSP Direct Exchange
+    definition: >-
+      The modern REST API surface that exposes MSP capabilities to integrators.
+      Covers loan boarding, customer service, escrow, payments, payoffs, default,
+      loss mitigation, investor reporting, stop-advance, and ownership transfer.
+    category: API
+
+  - term: LoanSphere
+    definition: >-
+      Black Knight's umbrella brand for default management, document services
+      (eClosing, eVault, eRecording), and decisioning analytics. Now folded into
+      ICE Mortgage Technology.
+    category: Product
+
+  - term: Empower
+    definition: >-
+      Black Knight's mid-to-enterprise loan origination system. Coexists with
+      Encompass under ICE Mortgage Technology; partner-gated integration model.
+    category: Product
+
+  - term: Encompass
+    definition: >-
+      Loan origination system originally from Ellie Mae (acquired by ICE in 2020).
+      Now the canonical LOS API surface under ICE Mortgage Technology, exposed via
+      Encompass Developer Connect at api.elliemae.com.
+    category: Product
+
+  - term: Optimal Blue PPE
+    longForm: Optimal Blue Product & Pricing Engine
+    definition: >-
+      The industry-dominant rate-and-product pricing engine used by mortgage
+      originators to price and lock loans. Acquired by Black Knight in 2020;
+      divested to Constellation Software's Perseus Operating Group in Sept 2023
+      as a condition of FTC clearance for the ICE / Black Knight deal.
+    category: Product
+
+  - term: Resitrader
+    definition: >-
+      Whole-loan trading platform that is part of Optimal Blue (now Constellation).
+    category: Product
+
+  - term: Loansifter
+    definition: >-
+      Turnkey PPE for mortgage brokers under the Optimal Blue umbrella.
+    category: Product
+
+  - term: Promise To Pay
+    definition: >-
+      Borrower commitment to pay arrears, captured by the ICE Mortgage Servicing
+      Promise To Pay API along with reason codes to support collection workflows.
+    category: Capability
+
+  - term: Investor Reporting
+    definition: >-
+      Loan-level activity reporting from servicers to GSEs (Fannie, Freddie),
+      Ginnie Mae, and private investors. Core MSP DX capability.
+    category: Capability
+
+  - term: Loss Mitigation
+    definition: >-
+      Workflows to avoid foreclosure (modifications, forbearance, deeds in lieu,
+      short sales). Exposed by MSP DX Loss Mitigation APIs.
+    category: Capability
+
+  - term: Servicing Vault
+    definition: >-
+      Document and data vault product category in the ICE Mortgage Servicing
+      catalog, descended from Black Knight LoanSphere document services.
+    category: Product
+
+  - term: SIAM
+    longForm: Servicing Investor Account Management
+    definition: >-
+      Investor account management capability in the ICE Mortgage Servicing catalog.
+    category: Capability
+
+  - term: ICE Acquisition
+    definition: >-
+      Intercontinental Exchange completed its acquisition of Black Knight in
+      September 2023 for approximately $11.7B (originally announced at $13.1B
+      in May 2022).
+    category: Event
+
+  - term: Optimal Blue Divestiture
+    definition: >-
+      As a condition of the FTC clearance for the ICE / Black Knight deal,
+      Optimal Blue was sold to Constellation Software's Perseus Operating Group
+      in September 2023.
+    category: Event
+
+  - term: Rate Lock
+    definition: >-
+      Commitment by a lender to honor a specific interest rate and pricing for a
+      borrower for a fixed period, created and managed through Optimal Blue PPE
+      lock-desk APIs.
+    category: Capability
+
+  - term: Mortgage Market Rate Indices
+    definition: >-
+      Sixteen rate indices published by Optimal Blue Business Intelligence APIs,
+      derived from real-time PPE flow.
+    category: Data Product

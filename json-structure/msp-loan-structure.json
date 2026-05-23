@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-structure.org/draft/2024-12/structure",
+  "title": "MSP Loan Structure",
+  "description": "Canonical structure for an MSP-serviced loan record exchanged via Black Knight / ICE MSP DX APIs.",
+  "type": "object",
+  "fields": {
+    "loanNumber": { "type": "string", "required": true, "description": "Servicer-assigned MSP loan number." },
+    "investorLoanNumber": { "type": "string", "description": "Investor identifier for reporting." },
+    "productCode": { "type": "string" },
+    "borrower": {
+      "type": "object",
+      "fields": {
+        "firstName": { "type": "string", "required": true },
+        "lastName": { "type": "string", "required": true },
+        "taxIdLast4": { "type": "string" }
+      }
+    },
+    "propertyAddress": {
+      "type": "object",
+      "fields": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "postalCode": { "type": "string" }
+      }
+    },
+    "originationDate": { "type": "date" },
+    "originalAmount": { "type": "decimal" },
+    "principalBalance": { "type": "decimal", "required": true },
+    "interestRate": { "type": "decimal" },
+    "nextPaymentDueDate": { "type": "date" },
+    "escrowBalance": { "type": "decimal" },
+    "investorCode": { "type": "string" },
+    "servicerCode": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["Active", "Paid In Full", "Foreclosure", "Bankruptcy", "Loss Mitigation", "Charge Off", "REO"]
+    },
+    "delinquencyDays": { "type": "integer" }
+  }
+}

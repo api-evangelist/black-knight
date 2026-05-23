@@ -1,0 +1,74 @@
+specification: API Commons Plans 0.1
+name: Black Knight (now ICE Mortgage Technology) Plans & Pricing
+description: >-
+  Black Knight never operated a self-serve, publicly priced API platform.
+  Commercial access has always flowed through enterprise contracts — first with
+  Black Knight, now with ICE Mortgage Technology — and partner / ISV programs
+  for Encompass, MSP DX, and the various servicing catalog APIs. Optimal Blue
+  follows the same partner-gated model under Constellation Software ownership.
+  No public price card is published for any surface; this document captures the
+  shape of the commercial offering rather than specific dollar amounts.
+provider:
+  name: ICE Mortgage Technology
+  url: https://mortgagetech.ice.com
+created: '2026-05-23'
+modified: '2026-05-23'
+
+plans:
+  - id: enterprise-servicing
+    name: MSP DX Enterprise Servicing
+    description: >-
+      Negotiated enterprise license for MSP and the MSP DX API surface. Pricing
+      structured as platform license + per-loan servicing fees + integration fees.
+    audience: Bank / non-bank mortgage servicers
+    pricingModel: Enterprise Contract
+    publicPrice: false
+    access: Negotiated
+    onboarding: https://mortgagetech.ice.com
+    requires:
+      - Master Services Agreement
+      - Implementation engagement
+      - ISV / API partner agreement for direct API access
+
+  - id: encompass-developer-connect-isv
+    name: Encompass Developer Connect (ISV Partner)
+    description: >-
+      Partner-gated REST API access to Encompass Lending Platform via
+      api.elliemae.com. OAuth 2.0 access tokens issued under ISV credentials.
+    audience: ISVs / system integrators / corporate lenders
+    pricingModel: Partner Program
+    publicPrice: false
+    access: Partner Application
+    onboarding: https://developer.icemortgagetechnology.com/developer-connect
+
+  - id: optimal-blue-ppe
+    name: Optimal Blue PPE & Lock Desk
+    description: >-
+      Partner / customer-gated access to Optimal Blue's Product & Pricing Engine
+      APIs, lock desk APIs, Resitrader trading APIs, and Loansifter broker
+      pricing APIs. Now under Constellation Software's Perseus Operating Group.
+    audience: Originators, brokers, investors, secondary-market traders
+    pricingModel: Subscription + Per-Search / Per-Lock Fees (typical industry pattern; not publicly disclosed)
+    publicPrice: false
+    access: Negotiated
+    onboarding: https://digitalmarketplace.optimalblue.com
+
+  - id: simplifile-e-recording
+    name: Simplifile / eRecording
+    description: >-
+      Per-recording transactional pricing for e-recording into county recorder
+      offices. Pricing varies by county recording fees + Simplifile service fee.
+    audience: Title agents, settlement, lenders
+    pricingModel: Transactional
+    publicPrice: false
+    access: Standard Account
+    onboarding: https://simplifile.com
+
+notes:
+  - >-
+    None of these surfaces publishes a self-serve pricing page. Cost discovery
+    requires direct engagement with ICE Mortgage Technology or Optimal Blue sales.
+  - >-
+    The Black Knight pre-acquisition pricing model was identical in shape —
+    enterprise + partner programs. Migration into ICE has not changed the
+    fundamental commercial pattern.

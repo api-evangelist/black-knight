@@ -1,0 +1,340 @@
+aid: black-knight
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/black-knight/refs/heads/main/apis.yml
+name: Black Knight (Acquired by ICE — Now ICE Mortgage Technology)
+description: >-
+  Black Knight, Inc. was a Jacksonville-based mortgage technology and data provider whose
+  core franchises were MSP (the dominant US loan-servicing platform), LoanSphere
+  (default, document, and decisioning suites), Empower LOS (mid-market loan origination),
+  and the Optimal Blue secondary marketing / product-and-pricing engine. Intercontinental
+  Exchange (NYSE: ICE) acquired Black Knight in September 2023 for approximately $11.7B
+  (down from the originally-announced $13.1B in May 2022) after divesting Optimal Blue
+  to Constellation Software's Perseus Operating Group as a condition of FTC clearance.
+  Black Knight's product lines now sit inside ICE Mortgage Technology alongside Encompass
+  (the ex-Ellie Mae LOS). The blackknightinc.com domain redirects to mortgagetech.ice.com,
+  and developer surfaces have migrated to developer.ice.com (MSP DX APIs, Servicing Vault,
+  Loss Mitigation, Payoffs, Promise To Pay) and developer.icemortgagetechnology.com
+  (Encompass Developer Connect). Optimal Blue's APIs are now hosted at
+  digitalmarketplace.optimalblue.com under independent Constellation Software ownership.
+  This profile documents the API surfaces as they existed under Black Knight and tracks
+  the post-acquisition fate of each product line.
+tags:
+  - Mortgage Technology
+  - Loan Servicing
+  - Loan Origination
+  - Secondary Marketing
+  - Default Management
+  - Investor Reporting
+  - Product Pricing Engine
+  - Real Estate Data
+  - FinTech
+  - Acquired Company
+  - ICE Mortgage Technology
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: black-knight:msp-dx
+    name: MSP DX (Direct Exchange) APIs
+    description: >-
+      MSP (Mortgage Servicing Platform) was Black Knight's flagship product — the
+      mainframe-rooted system of record that services the majority of US first-mortgage
+      loans. MSP DX (Direct Exchange) is the REST API surface around MSP, covering
+      loan boarding, customer service, escrow, payments, payoffs, default management,
+      loss mitigation, investor reporting, and stop-advance / ownership-transfer
+      activities. Now hosted at developer.ice.com under "Mortgage Servicing" with
+      subcategories including Collections, Customer Service, Invoicing, Loss
+      Mitigation, MSP DX, Payoffs, Servicing Digital, Servicing Vault, and SIAM.
+    humanURL: https://developer.ice.com/mortgage-servicing/catalog
+    tags:
+      - Loan Servicing
+      - MSP
+      - Default Management
+      - Investor Reporting
+      - Escrow
+      - Payments
+    properties:
+      - type: DeveloperPortal
+        url: https://developer.ice.com/mortgage-servicing/catalog
+      - type: Documentation
+        url: https://developer.ice.com/mortgage-servicing
+      - type: Authentication
+        url: https://developer.ice.com
+        title: OAuth 2.0 (ICE federated identity)
+      - type: JSONSchema
+        url: json-schema/msp-loan-schema.json
+      - type: JSONSchema
+        url: json-schema/msp-escrow-schema.json
+      - type: JSONSchema
+        url: json-schema/msp-payment-schema.json
+      - type: JSONStructure
+        url: json-structure/msp-loan-structure.json
+      - type: Example
+        url: examples/msp-loan-example.json
+      - type: Example
+        url: examples/msp-payment-example.json
+  - aid: black-knight:servicing-digital
+    name: Servicing Digital / Promise To Pay APIs
+    description: >-
+      Borrower-facing servicing capabilities including the Promise To Pay API, which
+      enables clients to document borrower payment promises along with reason codes,
+      supporting collection workflows. Originally a Black Knight Servicing Digital
+      product, now in the ICE Mortgage Servicing catalog.
+    humanURL: https://developer.ice.com/mortgage-servicing/catalog
+    tags:
+      - Loan Servicing
+      - Collections
+      - Borrower Engagement
+    properties:
+      - type: Documentation
+        url: https://developer.ice.com/mortgage-servicing/catalog
+      - type: JSONSchema
+        url: json-schema/servicing-promise-to-pay-schema.json
+      - type: Example
+        url: examples/servicing-promise-to-pay-example.json
+  - aid: black-knight:loansphere
+    name: LoanSphere Default, Document & Decisioning Suite
+    description: >-
+      LoanSphere was Black Knight's umbrella brand for default management
+      (foreclosure, bankruptcy, loss-mitigation case management), document services
+      (eClosing, eVault, eRecording via Simplifile/DocVerify which Black Knight
+      acquired in 2019), and decisioning analytics. Most LoanSphere capabilities
+      have been folded into ICE Mortgage Technology's servicing and origination
+      catalogs; legacy LoanSphere endpoints were never broadly exposed as a public
+      developer API, integrations have always been partner-gated.
+    humanURL: https://mortgagetech.ice.com
+    tags:
+      - Default Management
+      - Document Services
+      - eClosing
+      - eVault
+      - Decisioning
+    properties:
+      - type: Documentation
+        url: https://mortgagetech.ice.com
+      - type: Status
+        url: https://mortgagetech.ice.com
+        title: Folded into ICE Mortgage Technology — no public dev portal
+  - aid: black-knight:empower-los
+    name: Empower LOS APIs
+    description: >-
+      Empower was Black Knight's mid-to-enterprise loan origination system. After
+      the ICE acquisition, Empower coexists with ICE's larger Encompass LOS (from
+      the 2020 Ellie Mae acquisition). Empower API access has historically been
+      partner-gated and is not publicly documented; new integrations are steered
+      toward Encompass Developer Connect.
+    humanURL: https://mortgagetech.ice.com
+    tags:
+      - Loan Origination
+      - LOS
+      - Empower
+    properties:
+      - type: Documentation
+        url: https://mortgagetech.ice.com
+      - type: Status
+        url: https://mortgagetech.ice.com
+        title: Coexists with Encompass — partner-gated, no public API portal
+  - aid: black-knight:encompass-developer-connect
+    name: Encompass Developer Connect (sibling product under ICE)
+    description: >-
+      Although Encompass came to ICE via the 2020 Ellie Mae acquisition (not Black
+      Knight), it is now the canonical LOS API surface under ICE Mortgage Technology
+      and effectively supersedes the Empower public-API roadmap. Encompass Developer
+      Connect exposes ~16 resource categories — Loans, Pipeline, Contacts, eFolder,
+      Encompass Docs, Loan Verifications, Loan Tracking, Secondary Marketing,
+      Services, Settings, Webhooks, Workflow, Custom Data Objects, Document Delivery,
+      Loan Funding, Calculators — over OAuth 2.0 at api.elliemae.com.
+    humanURL: https://developer.icemortgagetechnology.com/developer-connect
+    baseURL: https://api.elliemae.com
+    tags:
+      - Loan Origination
+      - LOS
+      - Encompass
+      - Webhooks
+    properties:
+      - type: DeveloperPortal
+        url: https://developer.icemortgagetechnology.com/developer-connect
+      - type: APIReference
+        url: https://developer.icemortgagetechnology.com/developer-connect/reference
+      - type: Postman
+        url: https://help.icemortgagetechnology.com/documentation/developer-connect/postman/Encompass_Developer_Connect_postman_collection.json
+      - type: Authentication
+        url: https://developer.icemortgagetechnology.com/developer-connect
+        title: OAuth 2.0 (API Key + Access Token, ISV Partner, SAML SSO, MFA)
+      - type: ChangeLog
+        url: https://developer.icemortgagetechnology.com/developer-connect/changelog/254-major-release
+  - aid: black-knight:optimal-blue-ppe
+    name: Optimal Blue Product & Pricing APIs (divested to Constellation)
+    description: >-
+      Optimal Blue's Product & Pricing Engine (PPE) generates eligible products and
+      pricing for any user in any format and automates loan creation, locking,
+      post-lock management, and secondary / lock-desk workflows. Originally
+      acquired by Black Knight in 2020, Optimal Blue was divested to Constellation
+      Software's Perseus Operating Group in September 2023 as a condition of FTC
+      clearance for the ICE / Black Knight deal. APIs now live at
+      digitalmarketplace.optimalblue.com under OAuth 2.0, with claimed search-request
+      averages under 1 second across "millions of calls daily."
+    humanURL: https://digitalmarketplace.optimalblue.com
+    tags:
+      - Secondary Marketing
+      - Product Pricing Engine
+      - Rate Lock
+      - Optimal Blue
+      - Divested
+    properties:
+      - type: DeveloperPortal
+        url: https://digitalmarketplace.optimalblue.com
+      - type: Documentation
+        url: https://www2.optimalblue.com/api
+      - type: Authentication
+        url: https://www2.optimalblue.com/api
+        title: OAuth 2.0 with token-based access
+      - type: JSONSchema
+        url: json-schema/optimal-blue-pricing-schema.json
+      - type: JSONSchema
+        url: json-schema/optimal-blue-lock-schema.json
+      - type: Example
+        url: examples/optimal-blue-pricing-example.json
+      - type: Example
+        url: examples/optimal-blue-lock-example.json
+  - aid: black-knight:optimal-blue-trading
+    name: Optimal Blue Loan Trading APIs (Resitrader)
+    description: >-
+      Workflow and data APIs for the Resitrader loan-trading application — execute
+      trades, manage data modules, centralize trading operations. Now operated by
+      Optimal Blue under Constellation Software ownership.
+    humanURL: https://digitalmarketplace.optimalblue.com
+    tags:
+      - Loan Trading
+      - Resitrader
+      - Secondary Marketing
+    properties:
+      - type: DeveloperPortal
+        url: https://digitalmarketplace.optimalblue.com
+      - type: Documentation
+        url: https://www2.optimalblue.com/api
+  - aid: black-knight:optimal-blue-investor-solutions
+    name: Optimal Blue Investor Solutions APIs
+    description: >-
+      Automated workflows, originator data, and compliance checks for investors
+      buying loans on the secondary market.
+    humanURL: https://digitalmarketplace.optimalblue.com
+    tags:
+      - Investor Solutions
+      - Compliance
+      - Secondary Marketing
+    properties:
+      - type: DeveloperPortal
+        url: https://digitalmarketplace.optimalblue.com
+  - aid: black-knight:optimal-blue-business-intelligence
+    name: Optimal Blue Business Intelligence APIs
+    description: >-
+      Data tools including 16 Mortgage Market Rate Indices, integrable into
+      dashboards. Successor to Black Knight's Originations Market Monitor and
+      Mortgage Monitor data products at the API level.
+    humanURL: https://digitalmarketplace.optimalblue.com
+    tags:
+      - Business Intelligence
+      - Market Data
+      - Rate Indices
+    properties:
+      - type: DeveloperPortal
+        url: https://digitalmarketplace.optimalblue.com
+  - aid: black-knight:optimal-blue-broker-pricing
+    name: Optimal Blue Broker Pricing APIs (Loansifter)
+    description: >-
+      Loansifter is the turnkey PPE for mortgage brokers — generate and display
+      eligible products and pricing across borrower scenarios. Originally a Black
+      Knight (via Optimal Blue) product, now under Constellation Software.
+    humanURL: https://digitalmarketplace.optimalblue.com
+    tags:
+      - Broker Pricing
+      - Loansifter
+      - Product Pricing Engine
+    properties:
+      - type: DeveloperPortal
+        url: https://digitalmarketplace.optimalblue.com
+common:
+  - type: Website
+    url: https://mortgagetech.ice.com
+    title: Successor site (blackknightinc.com redirects here)
+  - type: LegacyWebsite
+    url: https://www.blackknightinc.com
+    title: 302-redirects to mortgagetech.ice.com
+  - type: ParentCompany
+    url: https://www.ice.com
+    title: Intercontinental Exchange (NYSE ICE) — acquired Sept 2023
+  - type: DeveloperPortal
+    url: https://developer.ice.com
+    title: ICE Developer Portal (Mortgage Servicing, Fixed Income & Data Services)
+  - type: DeveloperPortal
+    url: https://developer.icemortgagetechnology.com
+    title: ICE Mortgage Technology Developer Portal (Encompass Developer Connect)
+  - type: DeveloperPortal
+    url: https://digitalmarketplace.optimalblue.com
+    title: Optimal Blue Digital Marketplace (now Constellation Software)
+  - type: GitHubOrganization
+    url: https://github.com/ICEMortgageTechnology
+    title: 6 public sample repos (exp19-exp21 series, api-best-practices)
+  - type: LegacyGitHubOrganization
+    url: https://github.com/elliemae
+    title: 0 public repos (pre-rebrand placeholder)
+  - type: Acquisition
+    url: https://www.ice.com
+    title: ICE completed acquisition of Black Knight Sept 2023 (~$11.7B; Optimal Blue divested to Constellation Software)
+  - type: SpectralRules
+    url: rules/black-knight-rules.yml
+  - type: NaftikoCapability
+    url: capabilities/black-knight-msp-dx.yaml
+  - type: NaftikoCapability
+    url: capabilities/black-knight-loan-servicing-workflow.yaml
+  - type: NaftikoCapability
+    url: capabilities/black-knight-optimal-blue-pricing.yaml
+  - type: Vocabulary
+    url: vocabulary/black-knight-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/black-knight-context.jsonld
+  - type: Plans
+    url: plans/black-knight-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/black-knight-rate-limits.yml
+  - type: FinOps
+    url: finops/black-knight-finops.yml
+  - type: Features
+    data:
+      - name: MSP Loan Servicing of Record
+        description: Mainframe-rooted system of record that historically serviced the majority of US first mortgages; the largest single concentration in mortgage tech.
+      - name: MSP DX REST APIs
+        description: Modern REST surface over MSP covering loan boarding, escrow, payments, payoffs, default management, loss mitigation, investor reporting, stop-advance, and ownership transfer.
+      - name: LoanSphere Default Suite
+        description: Foreclosure, bankruptcy, and loss-mitigation case management; document services (eClosing, eVault, eRecording); decisioning analytics.
+      - name: Empower LOS
+        description: Mid-to-enterprise loan origination system with partner-gated integration; now coexists with Encompass under ICE.
+      - name: Optimal Blue PPE
+        description: Industry-dominant product-and-pricing engine for rate locks and secondary marketing; divested to Constellation Software in 2023.
+      - name: Resitrader Loan Trading
+        description: Whole-loan trading platform; part of Optimal Blue, now Constellation.
+      - name: 16 Mortgage Market Rate Indices
+        description: Optimal Blue Business Intelligence APIs publish 16 mortgage rate indices derived from real-time PPE flow.
+  - type: UseCases
+    data:
+      - name: Investor Loan Reporting
+        description: Servicers report loan-level activity to GSE and private investors via MSP DX investor-reporting APIs.
+      - name: Default Workflow Automation
+        description: Default servicers automate foreclosure, bankruptcy, and loss-mitigation case management via Loss Mitigation and Collections APIs.
+      - name: Secondary Marketing Rate Lock
+        description: Originators lock rates and price loans through Optimal Blue PPE APIs.
+      - name: Whole Loan Trading
+        description: Aggregators trade whole loans through Resitrader APIs.
+      - name: Borrower Promise To Pay
+        description: Servicers document borrower payment commitments through the Promise To Pay API for collection workflows.
+  - type: Integrations
+    data:
+      - name: Encompass (Ellie Mae) LOS
+        description: Sibling product under ICE; primary LOS integration target going forward.
+      - name: ICE Fixed Income & Data Services
+        description: Cross-sell into ICE's broader data/markets platform.
+      - name: Salesforce
+        description: Optimal Blue Integration Studio ships done-for-you Salesforce connectors.

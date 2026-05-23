@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-knight/main/json-schema/servicing-promise-to-pay-schema.json",
+  "title": "Promise To Pay",
+  "description": "Borrower commitment to pay arrears, captured by the ICE Mortgage Servicing Promise To Pay API. Documents the promise along with reason codes to support collection workflows.",
+  "type": "object",
+  "required": ["loanNumber", "promiseAmount", "promiseDate", "reasonCode"],
+  "properties": {
+    "promiseId": { "type": "string" },
+    "loanNumber": { "type": "string" },
+    "promiseAmount": {
+      "type": "number",
+      "description": "Amount the borrower committed to pay in USD."
+    },
+    "promiseDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date on which the borrower has committed to make the payment."
+    },
+    "reasonCode": {
+      "type": "string",
+      "description": "Standard reason code for the delinquency (e.g., JOB_LOSS, MEDICAL, REDUCTION_OF_INCOME, NATURAL_DISASTER)."
+    },
+    "reasonDescription": { "type": "string" },
+    "channel": {
+      "type": "string",
+      "enum": ["Inbound Call", "Outbound Call", "Self-Service", "Letter", "Email", "Chat"]
+    },
+    "agentId": { "type": "string" },
+    "createdDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Open", "Kept", "Broken", "Cancelled"]
+    }
+  }
+}

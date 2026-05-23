@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-knight/main/json-schema/msp-loan-schema.json",
+  "title": "MSP Loan",
+  "description": "Loan-level record exposed by the Black Knight / ICE MSP DX (Direct Exchange) APIs. Captures core servicing identifiers, borrower context, balances, and investor reporting metadata.",
+  "type": "object",
+  "required": [
+    "loanNumber",
+    "borrower",
+    "principalBalance",
+    "status"
+  ],
+  "properties": {
+    "loanNumber": {
+      "type": "string",
+      "description": "MSP loan number (servicer-assigned, typically 10 digits)."
+    },
+    "investorLoanNumber": {
+      "type": "string",
+      "description": "Investor-assigned loan identifier used in investor reporting."
+    },
+    "productCode": {
+      "type": "string",
+      "description": "MSP product code identifying the loan product (e.g., FNMA-CONV-30YR)."
+    },
+    "borrower": {
+      "type": "object",
+      "required": ["firstName", "lastName"],
+      "properties": {
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "taxIdLast4": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$",
+          "description": "Last four of borrower SSN (PII-restricted)."
+        }
+      }
+    },
+    "propertyAddress": {
+      "type": "object",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "postalCode": { "type": "string" }
+      }
+    },
+    "originationDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Original note date."
+    },
+    "originalAmount": {
+      "type": "number",
+      "description": "Original loan amount in USD."
+    },
+    "principalBalance": {
+      "type": "number",
+      "description": "Current unpaid principal balance (UPB) in USD."
+    },
+    "interestRate": {
+      "type": "number",
+      "description": "Current note rate, percent."
+    },
+    "nextPaymentDueDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "escrowBalance": {
+      "type": "number",
+      "description": "Current escrow balance in USD."
+    },
+    "investorCode": {
+      "type": "string",
+      "description": "Investor code (e.g., FNMA, FHLMC, GNMA, or private label)."
+    },
+    "servicerCode": {
+      "type": "string",
+      "description": "Servicer identifier within MSP."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Active", "Paid In Full", "Foreclosure", "Bankruptcy", "Loss Mitigation", "Charge Off", "REO"],
+      "description": "Servicing status."
+    },
+    "delinquencyDays": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Days past due as of last cycle."
+    }
+  }
+}

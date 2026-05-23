@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-knight/main/json-schema/msp-payment-schema.json",
+  "title": "MSP Payment",
+  "description": "Payment transaction posted against an MSP-serviced loan.",
+  "type": "object",
+  "required": ["loanNumber", "amount", "effectiveDate"],
+  "properties": {
+    "paymentId": { "type": "string" },
+    "loanNumber": { "type": "string" },
+    "amount": {
+      "type": "number",
+      "description": "Total payment amount in USD."
+    },
+    "principalAmount": { "type": "number" },
+    "interestAmount": { "type": "number" },
+    "escrowAmount": { "type": "number" },
+    "lateChargeAmount": { "type": "number" },
+    "otherAmount": { "type": "number" },
+    "effectiveDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "postDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "enum": ["ACH", "Check", "Wire", "Card", "Lockbox", "MoneyGram", "WesternUnion"]
+    },
+    "reversal": {
+      "type": "boolean",
+      "default": false,
+      "description": "True for reversal/NSF transactions."
+    }
+  }
+}

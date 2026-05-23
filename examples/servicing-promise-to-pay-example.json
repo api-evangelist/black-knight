@@ -1,0 +1,12 @@
+{
+  "promiseId": "P2P-2026-05-22-554210",
+  "loanNumber": "0012345678",
+  "promiseAmount": 2148.92,
+  "promiseDate": "2026-06-05",
+  "reasonCode": "REDUCTION_OF_INCOME",
+  "reasonDescription": "Borrower reported temporary hours reduction at primary employer; expects return to full schedule by next cycle.",
+  "channel": "Inbound Call",
+  "agentId": "AGT-1187",
+  "createdDate": "2026-05-22T15:48:03Z",
+  "status": "Open"
+}

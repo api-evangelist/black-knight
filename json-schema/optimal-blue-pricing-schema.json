@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-knight/main/json-schema/optimal-blue-pricing-schema.json",
+  "title": "Optimal Blue Pricing Search Result",
+  "description": "Eligible product / pricing scenario returned by the Optimal Blue Product & Pricing Engine (PPE). Originally a Black Knight property, now Constellation Software's Perseus Operating Group.",
+  "type": "object",
+  "required": ["searchId", "scenarios"],
+  "properties": {
+    "searchId": { "type": "string" },
+    "loanAmount": { "type": "number" },
+    "propertyValue": { "type": "number" },
+    "ltv": { "type": "number", "description": "Loan-to-value ratio percent." },
+    "creditScore": { "type": "integer" },
+    "occupancy": {
+      "type": "string",
+      "enum": ["Primary", "Secondary", "Investment"]
+    },
+    "propertyType": {
+      "type": "string",
+      "enum": ["SFR", "PUD", "Condo", "Townhouse", "Manufactured", "2-4 Unit"]
+    },
+    "loanPurpose": {
+      "type": "string",
+      "enum": ["Purchase", "Rate-Term Refi", "Cash-Out Refi"]
+    },
+    "lockDays": { "type": "integer" },
+    "scenarios": {
+      "type": "array",
+      "description": "List of eligible products with pricing.",
+      "items": {
+        "type": "object",
+        "required": ["productCode", "investorName", "rate", "price"],
+        "properties": {
+          "productCode": { "type": "string" },
+          "productName": { "type": "string" },
+          "investorName": { "type": "string" },
+          "rate": { "type": "number", "description": "Note rate percent." },
+          "price": { "type": "number", "description": "Base price (par = 100.000)." },
+          "discountPoints": { "type": "number" },
+          "lockPeriodDays": { "type": "integer" },
+          "compensation": { "type": "string", "enum": ["BPC", "LPC"] }
+        }
+      }
+    }
+  }
+}

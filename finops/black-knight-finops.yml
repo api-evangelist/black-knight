@@ -1,0 +1,70 @@
+specification: API Commons FinOps 0.1
+name: Black Knight / ICE Mortgage Technology FinOps Surface
+description: >-
+  FinOps mapping for the ex-Black Knight commercial surface (now ICE Mortgage
+  Technology), plus the Optimal Blue surface (now Constellation Software).
+  None of these products publishes a self-serve cost-attribution surface or
+  FOCUS-compatible export today. Cost data flows through enterprise invoices
+  rather than developer-portal usage dashboards. This document captures what is
+  knowable about cost shape, billing cadence, and chargeback dimensions.
+provider:
+  name: ICE Mortgage Technology
+  url: https://mortgagetech.ice.com
+created: '2026-05-23'
+modified: '2026-05-23'
+
+billing:
+  cadence: Monthly enterprise invoice
+  paymentTerms: Net 30 (typical enterprise)
+  currency: USD
+  consolidatedInvoice: true
+  selfServeBilling: false
+
+costDrivers:
+  - id: msp-platform-license
+    name: MSP Platform License
+    appliesTo: msp-dx
+    unit: Annual platform fee
+    notes: Fixed annual platform fee separate from per-loan costs.
+
+  - id: msp-per-loan-servicing
+    name: MSP Per-Loan Servicing Fee
+    appliesTo: msp-dx
+    unit: Per loan per month
+    notes: Volume tiered; declines with portfolio size.
+
+  - id: encompass-license
+    name: Encompass License
+    appliesTo: encompass-developer-connect
+    unit: Per seat / per loan funded
+    notes: Hybrid seat + per-funded-loan model typical in industry.
+
+  - id: optimal-blue-search
+    name: Optimal Blue PPE Search / Lock Fee
+    appliesTo: optimal-blue-ppe
+    unit: Per search / per lock (typical industry pattern)
+    notes: Subscription + transactional component; not publicly priced.
+
+  - id: simplifile-recording
+    name: Simplifile eRecording Fee
+    appliesTo: simplifile-e-recording
+    unit: Per document recorded
+    notes: Service fee plus pass-through county recording fees.
+
+focusMapping:
+  status: Not Available
+  description: >-
+    No FOCUS-spec usage export is published by ICE Mortgage Technology or
+    Optimal Blue. Enterprise customers reconcile costs from PDF / EDI invoices.
+  recommendedDimensions:
+    - servicer / investor scope (cost center)
+    - environment (production vs. test)
+    - loan portfolio segment
+    - product family (MSP / Encompass / Optimal Blue / Simplifile)
+
+observability:
+  usageDashboard: Partner-gated; not standardized across products
+  alerting: Negotiated per contract
+  exportFormats:
+    - PDF invoice
+    - EDI 810 (large enterprise)

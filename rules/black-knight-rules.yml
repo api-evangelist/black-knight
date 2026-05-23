@@ -1,0 +1,91 @@
+extends: spectral:oas
+documentationUrl: https://raw.githubusercontent.com/api-evangelist/black-knight/main/rules/black-knight-rules.yml
+
+rules:
+  black-knight-info-title-required:
+    description: All ICE Mortgage Technology / Black Knight specs must have a clear info.title naming the API and surface.
+    severity: error
+    given: $.info
+    then:
+      field: title
+      function: truthy
+
+  black-knight-info-description-required:
+    description: Specs must include a description noting whether the API is MSP DX, Servicing, Encompass, or Optimal Blue, and the current ICE / Constellation ownership.
+    severity: error
+    given: $.info
+    then:
+      field: description
+      function: truthy
+
+  black-knight-info-contact-required:
+    description: Provide an info.contact pointing to developer.ice.com, developer.icemortgagetechnology.com, or digitalmarketplace.optimalblue.com.
+    severity: warn
+    given: $.info
+    then:
+      field: contact
+      function: truthy
+
+  black-knight-oauth-flow-required:
+    description: ICE / Optimal Blue APIs are OAuth 2.0 only; specs must declare an oauth2 security scheme.
+    severity: error
+    given: $.components.securitySchemes
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          patternProperties:
+            "^.*$":
+              type: object
+              properties:
+                type:
+                  enum: [oauth2, http, openIdConnect]
+
+  black-knight-operation-id-camelcase:
+    description: operationId values should be camelCase (e.g., getMspLoan, createPromiseToPay, searchOptimalBluePricing).
+    severity: warn
+    given: $.paths.*.*.operationId
+    then:
+      function: casing
+      functionOptions:
+        type: camel
+
+  black-knight-summary-title-case:
+    description: Operation summaries must use Title Case (e.g., "Get MSP Loan By Number").
+    severity: warn
+    given: $.paths.*.*.summary
+    then:
+      function: pattern
+      functionOptions:
+        match: "^([A-Z][a-zA-Z0-9]*)( [A-Z][a-zA-Z0-9]*)*$"
+
+  black-knight-tags-required:
+    description: Every operation must carry at least one tag (Loan Servicing, Default Management, Loss Mitigation, Secondary Marketing, etc.).
+    severity: error
+    given: $.paths.*.*
+    then:
+      field: tags
+      function: truthy
+
+  black-knight-loan-number-pattern:
+    description: MSP loan numbers should be documented as 10-digit zero-padded strings.
+    severity: info
+    given: $.components.schemas.*.properties.loanNumber
+    then:
+      field: pattern
+      function: truthy
+
+  black-knight-error-responses-present:
+    description: Operations must document at least one 4xx error response.
+    severity: warn
+    given: $.paths.*.*.responses
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          patternProperties:
+            "^4[0-9]{2}$":
+              type: object
+          minProperties: 1
