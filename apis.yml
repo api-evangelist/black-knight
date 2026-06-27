@@ -71,9 +71,9 @@ apis:
         url: json-schema/msp-payment-schema.json
       - type: JSONStructure
         url: json-structure/msp-loan-structure.json
-      - type: Example
+      - type: Examples
         url: examples/msp-loan-example.json
-      - type: Example
+      - type: Examples
         url: examples/msp-payment-example.json
   - aid: black-knight:servicing-digital
     name: Servicing Digital / Promise To Pay APIs
@@ -92,7 +92,7 @@ apis:
         url: https://developer.ice.com/mortgage-servicing/catalog
       - type: JSONSchema
         url: json-schema/servicing-promise-to-pay-schema.json
-      - type: Example
+      - type: Examples
         url: examples/servicing-promise-to-pay-example.json
   - aid: black-knight:loansphere
     name: LoanSphere Default, Document & Decisioning Suite
@@ -195,9 +195,9 @@ apis:
         url: json-schema/optimal-blue-pricing-schema.json
       - type: JSONSchema
         url: json-schema/optimal-blue-lock-schema.json
-      - type: Example
+      - type: Examples
         url: examples/optimal-blue-pricing-example.json
-      - type: Example
+      - type: Examples
         url: examples/optimal-blue-lock-example.json
   - aid: black-knight:optimal-blue-trading
     name: Optimal Blue Loan Trading APIs (Resitrader)
@@ -286,11 +286,11 @@ common:
     title: ICE completed acquisition of Black Knight Sept 2023 (~$11.7B; Optimal Blue divested to Constellation Software)
   - type: SpectralRules
     url: rules/black-knight-rules.yml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/black-knight-msp-dx.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/black-knight-loan-servicing-workflow.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/black-knight-optimal-blue-pricing.yaml
   - type: Vocabulary
     url: vocabulary/black-knight-vocabulary.yml
