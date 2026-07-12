@@ -257,6 +257,8 @@ apis:
       - type: DeveloperPortal
         url: https://digitalmarketplace.optimalblue.com
 common:
+  - type: DomainSecurity
+    url: security/black-knight-domain-security.yml
   - type: Website
     url: https://mortgagetech.ice.com
     title: Successor site (blackknightinc.com redirects here)
