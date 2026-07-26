@@ -31,9 +31,21 @@ tags:
   - Acquired Company
   - ICE Mortgage Technology
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+    - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/black-knight.png
 created: '2026-05-23'
-modified: '2026-05-23'
+modified: '2026-07-25'
 specificationVersion: '0.19'
 apis:
   - aid: black-knight:msp-dx
@@ -215,19 +227,6 @@ apis:
         url: https://digitalmarketplace.optimalblue.com
       - type: Documentation
         url: https://www2.optimalblue.com/api
-  - aid: black-knight:optimal-blue-investor-solutions
-    name: Optimal Blue Investor Solutions APIs
-    description: >-
-      Automated workflows, originator data, and compliance checks for investors
-      buying loans on the secondary market.
-    humanURL: https://digitalmarketplace.optimalblue.com
-    tags:
-      - Investor Solutions
-      - Compliance
-      - Secondary Marketing
-    properties:
-      - type: DeveloperPortal
-        url: https://digitalmarketplace.optimalblue.com
   - aid: black-knight:optimal-blue-business-intelligence
     name: Optimal Blue Business Intelligence APIs
     description: >-
