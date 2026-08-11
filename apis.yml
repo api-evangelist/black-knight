@@ -287,12 +287,6 @@ common:
     title: ICE completed acquisition of Black Knight Sept 2023 (~$11.7B; Optimal Blue divested to Constellation Software)
   - type: SpectralRules
     url: rules/black-knight-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/black-knight-msp-dx.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/black-knight-loan-servicing-workflow.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/black-knight-optimal-blue-pricing.yaml
   - type: Vocabulary
     url: vocabulary/black-knight-vocabulary.yml
   - type: JSONLD
