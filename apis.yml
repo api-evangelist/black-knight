@@ -46,7 +46,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/black-knight.png
 created: '2026-05-23'
 modified: '2026-07-25'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: black-knight:msp-dx
     name: MSP DX (Direct Exchange) APIs
