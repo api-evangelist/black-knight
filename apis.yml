@@ -27,6 +27,18 @@ tags:
   - Investor Reporting
   - Product Pricing Engine
   - Real Estate Data
+  - Fintech
+  - Acquired Company
+  - ICE Mortgage Technology
+tags_raw:
+  - Mortgage Technology
+  - Loan Servicing
+  - Loan Origination
+  - Secondary Marketing
+  - Default Management
+  - Investor Reporting
+  - Product Pricing Engine
+  - Real Estate Data
   - FinTech
   - Acquired Company
   - ICE Mortgage Technology
@@ -97,6 +109,10 @@ apis:
     humanURL: https://developer.ice.com/mortgage-servicing/catalog
     tags:
       - Loan Servicing
+      - Collection
+      - Borrower Engagement
+    tags_raw:
+      - Loan Servicing
       - Collections
       - Borrower Engagement
     properties:
@@ -161,6 +177,11 @@ apis:
     humanURL: https://developer.icemortgagetechnology.com/developer-connect
     baseURL: https://api.elliemae.com
     tags:
+      - Loan Origination
+      - LOS
+      - Encompass
+      - Webhook
+    tags_raw:
       - Loan Origination
       - LOS
       - Encompass
