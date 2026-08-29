@@ -1,5 +1,7 @@
 aid: black-knight
 url: >-
+x-api-posture: no-product-api
+x-api-posture-basis: observed
   https://raw.githubusercontent.com/api-evangelist/black-knight/refs/heads/main/apis.yml
 name: Black Knight (Acquired by ICE — Now ICE Mortgage Technology)
 description: >-
