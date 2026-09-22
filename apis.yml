@@ -20,6 +20,9 @@ description: >-
   digitalmarketplace.optimalblue.com under independent Constellation Software ownership.
   This profile documents the API surfaces as they existed under Black Knight and tracks
   the post-acquisition fate of each product line.
+x-docs-platform: redocly
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-20
 tags:
   - Mortgage Technology
   - Loan Servicing
