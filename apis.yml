@@ -24,7 +24,7 @@ x-docs-platform: redocly
 x-docs-platform-confidence: medium
 x-docs-platform-checked: 2026-09-20
 tags:
-  - Mortgage Technology
+  - Mortgage
   - Loan Servicing
   - Loan Origination
   - Secondary Marketing
@@ -370,3 +370,6 @@ common:
         description: Cross-sell into ICE's broader data/markets platform.
       - name: Salesforce
         description: Optimal Blue Integration Studio ships done-for-you Salesforce connectors.
+x-parent: intercontinental-exchange
+x-relationship: acquisition
+x-acquired: 2023
