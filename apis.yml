@@ -73,7 +73,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/black-knight.png
 created: '2026-05-23'
-modified: '2026-07-25'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: black-knight:msp-dx
@@ -293,6 +293,8 @@ apis:
       - type: DeveloperPortal
         url: https://digitalmarketplace.optimalblue.com
 common:
+  - url: https://mortgagetech.ice.com/blog
+    type: Blog
   - type: DomainSecurity
     url: security/black-knight-domain-security.yml
   - type: Website
