@@ -77,3 +77,33 @@ notes:
     The Black Knight pre-acquisition pricing model was identical in shape —
     enterprise + partner programs. Migration into ICE has not changed the
     fundamental commercial pattern.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: MSP DX Enterprise Servicing
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Encompass Developer Connect (ISV Partner)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Optimal Blue PPE & Lock Desk
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Simplifile / eRecording
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
