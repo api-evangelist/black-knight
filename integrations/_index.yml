@@ -26,7 +26,7 @@
     - Web API Core 2.0.0 Certified Legacy
     summary_url: https://certification.reso.org/summary/T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-baldwin-realtors
@@ -49,7 +49,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-bay-east-association-of-realtors
@@ -72,7 +72,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-central-wisconsin-multiple-listing-service
@@ -95,7 +95,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-cheyenne-board-of-realtors
@@ -118,7 +118,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-colorado-real-estate-network-cren
@@ -141,7 +141,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-contra-costa-association-of-realtors
@@ -164,7 +164,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-cooperative-arkansas-realtors-mls
@@ -187,7 +187,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-great-plains-regional-mls
@@ -212,7 +212,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-greater-alabama-mls
@@ -234,7 +234,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-greater-greenville-association-of-realtors
@@ -257,7 +257,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-hudson-county-mls-liberty-board-of-realtors
@@ -280,7 +280,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-indiana-regional-mls
@@ -303,7 +303,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-lake-superior-area-realtors
@@ -326,7 +326,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-lawton-board-of-realtors
@@ -349,7 +349,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-maui-mls-realtors-association-of-maui
@@ -372,7 +372,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-memphis-area-association-of-realtors
@@ -395,7 +395,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-mirealsource
@@ -417,7 +417,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-new-mexico-mls
@@ -440,7 +440,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-north-central-board-of-realtors-ok
@@ -463,7 +463,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-north-central-west-virginia-rein
@@ -486,7 +486,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-northwest-oklahoma-association-of-realtors
@@ -509,7 +509,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-outer-banks-association-of-realtors
@@ -532,7 +532,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-pacific-regional-mls
@@ -555,7 +555,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-pee-dee-realtor-association
@@ -578,7 +578,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-pensacola-association-of-realtors
@@ -601,7 +601,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-primemls
@@ -624,7 +624,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-realtor-association-of-the-sioux-empire
@@ -647,7 +647,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-realtors-association-of-northeast-wisconsin
@@ -670,7 +670,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-selkirk-association-of-realtors
@@ -693,7 +693,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-south-central-wisconsin-multiple-listing-service
@@ -716,7 +716,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-strategic-mls-alliance-cullman-shoals-area
@@ -739,7 +739,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-terre-haute-area-association-of-realtors
@@ -762,7 +762,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-west-central-association-of-realtors-mo
@@ -785,7 +785,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-western-kentucky-regional-mls
@@ -808,7 +808,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-willamette-valley-mls
@@ -831,7 +831,7 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: black-knight-yuma-association-of-realtors
@@ -854,6 +854,6 @@
     organization_type: MLS
     vendor_uoi: T00000048
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
