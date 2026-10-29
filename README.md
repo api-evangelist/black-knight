@@ -1,4 +1,4 @@
-# Black Knight (Acquired by ICE — Now ICE Mortgage Technology)
+# Black Knight
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,68 +64,157 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Black Knight, Inc. was a Jacksonville-based mortgage technology and data provider whose core franchises were:
+Black Knight, Inc. was a Jacksonville-based mortgage technology and data provider whose core franchises were MSP (the dominant US loan-servicing platform), LoanSphere (default, document, and decisioning suites), Empower LOS (mid-market loan origination), and the Optimal Blue secondary marketing / product-and-pricing engine. Intercontinental Exchange (NYSE: ICE) acquired Black Knight in September 2023 for approximately $11.7B (down from the originally-announced $13.1B in May 2022) after divesting Optimal Blue to Constellation Software's Perseus Operating Group as a condition of FTC clearance. Black Knight's product lines now sit inside ICE Mortgage Technology alongside Encompass (the ex-Ellie Mae LOS). The blackknightinc.com domain redirects to mortgagetech.ice.com, and developer surfaces have migrated to developer.ice.com (MSP DX APIs, Servicing Vault, Loss Mitigation, Payoffs, Promise To Pay) and developer.icemortgagetechnology.com (Encompass Developer Connect). Optimal Blue's APIs are now hosted at digitalmarketplace.optimalblue.com under independent Constellation Software ownership. This profile documents the API surfaces as they existed under Black Knight and tracks the post-acquisition fate of each product line.
 
-- **MSP** — the dominant US loan-servicing platform
-- **LoanSphere** — default management, document services (eClosing, eVault, eRecording), decisioning
-- **Empower LOS** — mid-market loan origination
-- **Optimal Blue** — secondary marketing, the industry's most-used product-and-pricing engine
+**Areas:** Mortgage · Loan Servicing · Loan Origination · Secondary Marketing · Default Management · Investor Reporting · Product Pricing Engine · Real Estate Data · Fintech · Acquired Company · ICE Mortgage Technology
 
-**Intercontinental Exchange (NYSE: ICE) acquired Black Knight in September 2023 for ~$11.7B** (down from the originally-announced $13.1B in May 2022) after **divesting Optimal Blue to Constellation Software's Perseus Operating Group** as a condition of FTC clearance.
+## Black Knight on APIs.io
 
-Today:
+Everything profiled for Black Knight is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/black-knight/](https://apis.io/providers/black-knight/)** — or go straight to one of the APIs or properties below.
 
-- `blackknightinc.com` 302-redirects to `mortgagetech.ice.com`
-- Black Knight's product lines now sit inside ICE Mortgage Technology alongside Encompass (the ex-Ellie Mae LOS, acquired by ICE in 2020)
-- Developer surfaces have migrated to `developer.ice.com` (MSP DX APIs, Servicing Vault, Loss Mitigation, Payoffs, Promise To Pay) and `developer.icemortgagetechnology.com` (Encompass Developer Connect)
-- Optimal Blue APIs are now hosted at `digitalmarketplace.optimalblue.com` under independent Constellation Software ownership
+### APIs (9)
 
-This repo documents the API surfaces as they existed under Black Knight and tracks the post-acquisition fate of each product line.
+- [MSP DX (Direct Exchange) APIs](https://apis.io/apis/black-knight/msp-dx/) — MSP (Mortgage Servicing Platform) was Black Knight's flagship product — the mainframe-rooted system of record that services the majority of US…
+- [Servicing Digital / Promise To Pay APIs](https://apis.io/apis/black-knight/servicing-digital/) — Borrower-facing servicing capabilities including the Promise To Pay API, which enables clients to document borrower payment promises along with reason…
+- [LoanSphere Default, Document & Decisioning Suite](https://apis.io/apis/black-knight/loansphere/) — LoanSphere was Black Knight's umbrella brand for default management (foreclosure, bankruptcy, loss-mitigation case management), document services (eClosing,…
+- [Empower LOS APIs](https://apis.io/apis/black-knight/empower-los/) — Empower was Black Knight's mid-to-enterprise loan origination system. After the ICE acquisition, Empower coexists with ICE's larger Encompass LOS (from the…
+- [Encompass Developer Connect (sibling product under ICE)](https://apis.io/apis/black-knight/encompass-developer-connect/) — Although Encompass came to ICE via the 2020 Ellie Mae acquisition (not Black Knight), it is now the canonical LOS API surface under ICE Mortgage Technology…
+- [Optimal Blue Product & Pricing APIs (divested to Constellation)](https://apis.io/apis/black-knight/optimal-blue-ppe/) — Optimal Blue's Product & Pricing Engine (PPE) generates eligible products and pricing for any user in any format and automates loan creation, locking,…
+- [Optimal Blue Loan Trading APIs (Resitrader)](https://apis.io/apis/black-knight/optimal-blue-trading/) — Workflow and data APIs for the Resitrader loan-trading application — execute trades, manage data modules, centralize trading operations. Now operated by…
+- [Optimal Blue Business Intelligence APIs](https://apis.io/apis/black-knight/optimal-blue-business-intelligence/) — Data tools including 16 Mortgage Market Rate Indices, integrable into dashboards. Successor to Black Knight's Originations Market Monitor and Mortgage…
+- [Optimal Blue Broker Pricing APIs (Loansifter)](https://apis.io/apis/black-knight/optimal-blue-broker-pricing/) — Loansifter is the turnkey PPE for mortgage brokers — generate and display eligible products and pricing across borrower scenarios. Originally a Black Knight…
 
-## APIs Documented
+### Published properties
 
-| # | API | Status | Portal |
-|---|---|---|---|
-| 1 | MSP DX (Direct Exchange) APIs | Active under ICE | `developer.ice.com/mortgage-servicing/catalog` |
-| 2 | Servicing Digital / Promise To Pay | Active under ICE | `developer.ice.com` |
-| 3 | LoanSphere Default / Document / Decisioning | Folded into ICE — no public dev portal | `mortgagetech.ice.com` |
-| 4 | Empower LOS | Coexists with Encompass — partner-gated | `mortgagetech.ice.com` |
-| 5 | Encompass Developer Connect (sibling) | Active — primary LOS API surface under ICE | `developer.icemortgagetechnology.com/developer-connect` |
-| 6 | Optimal Blue Product & Pricing (PPE) | **Divested to Constellation Sept 2023** | `digitalmarketplace.optimalblue.com` |
-| 7 | Optimal Blue Loan Trading (Resitrader) | Under Constellation | `digitalmarketplace.optimalblue.com` |
-| 8 | Optimal Blue Investor Solutions | Under Constellation | `digitalmarketplace.optimalblue.com` |
-| 9 | Optimal Blue Business Intelligence (16 Rate Indices) | Under Constellation | `digitalmarketplace.optimalblue.com` |
-| 10 | Optimal Blue Broker Pricing (Loansifter) | Under Constellation | `digitalmarketplace.optimalblue.com` |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### JSON Schema (6)
 
-| Type | Folder | Files |
-|---|---|---|
-| JSON Schema | `json-schema/` | 6 (msp-loan, msp-escrow, msp-payment, servicing-promise-to-pay, optimal-blue-pricing, optimal-blue-lock) |
-| JSON Structure | `json-structure/` | 1 (msp-loan) |
-| JSON-LD Context | `json-ld/` | 1 (black-knight-context) — maps to FIBO + schema.org |
-| Examples | `examples/` | 5 (msp-loan, msp-payment, promise-to-pay, optimal-blue-pricing, optimal-blue-lock) |
-| Naftiko Capabilities | `capabilities/` | 3 (msp-dx, loan-servicing-workflow, optimal-blue-pricing) |
-| Spectral Rules | `rules/` | 1 (black-knight-rules.yml) |
-| Vocabulary | `vocabulary/` | 1 (black-knight-vocabulary.yml — 17 domain terms) |
-| Plans / Pricing | `plans/` | 1 (4 commercial surfaces; all partner-gated, no public price card) |
-| Rate Limits | `rate-limits/` | 1 (contractual; not publicly published) |
-| FinOps | `finops/` | 1 (no FOCUS export; cost via enterprise invoice) |
+The data models the API reads and writes.
 
-## Absent / Not Public
+- [MSP Escrow Item](https://apis.io/schemas/black-knight/msp-escrow/)
+- [MSP Loan](https://apis.io/schemas/black-knight/msp-loan/)
+- [MSP Payment](https://apis.io/schemas/black-knight/msp-payment/)
+- [Optimal Blue Rate Lock](https://apis.io/schemas/black-knight/optimal-blue-lock/)
+- [Optimal Blue Pricing Search Result](https://apis.io/schemas/black-knight/optimal-blue-pricing/)
+- [Promise To Pay](https://apis.io/schemas/black-knight/servicing-promise-to-pay/)
 
-- **No OpenAPI specs published.** MSP DX, Encompass Developer Connect, and Optimal Blue all gate spec access behind portal login or ISV onboarding. Public portals list catalog categories but not downloadable specs.
-- **No public price card.** All four commercial surfaces (MSP, Encompass, Optimal Blue, Simplifile) use enterprise / partner contracts.
-- **No public rate-limit numbers.** Optimal Blue advertises SLOs ("search request average < 1 sec", "millions of calls daily") but not per-key quotas.
-- **No FOCUS-compatible FinOps export.** Cost reconciliation flows through PDF / EDI invoices.
-- **EllieMae GitHub org has 0 public repos** — only the rebranded `ICEMortgageTechnology` org carries any sample code (6 small demo repos: exp19-exp21 series, api-best-practices).
+#### JSON Structure (1)
 
-## Acquisition Timeline
+Data models expressed in JSON Structure.
 
-- **May 2022** — ICE announces agreement to acquire Black Knight for $13.1B
-- **Sept 2023** — Deal closes at ~$11.7B; **Optimal Blue divested to Constellation Software / Perseus Operating Group** as FTC condition
-- **2024–** — Black Knight brand sunset; products absorbed into ICE Mortgage Technology alongside Encompass (ex-Ellie Mae, 2020 acquisition)
+- [Msp Loan Structure](https://apis.io/json-structure/black-knight/msp-loan-structure/)
 
-## Index
+#### JSON-LD (1)
 
-The full index of APIs, properties, features, use cases, integrations, and references lives in [`apis.yml`](./apis.yml).
+Linked-data contexts for the provider's vocabulary.
+
+- [Black Knight Context](https://apis.io/jsonld/black-knight/black-knight-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Black Knight / ICE Mortgage Technology Vocabulary](https://apis.io/vocabularies/black-knight/black-knight-vocabulary/)
+
+#### Examples (5)
+
+Example requests and responses.
+
+- [Msp Loan Example](https://apis.io/examples/black-knight/msp-loan-example/)
+- [Msp Payment Example](https://apis.io/examples/black-knight/msp-payment-example/)
+- [Optimal Blue Lock Example](https://apis.io/examples/black-knight/optimal-blue-lock-example/)
+- [Optimal Blue Pricing Example](https://apis.io/examples/black-knight/optimal-blue-pricing-example/)
+- [Servicing Promise To Pay Example](https://apis.io/examples/black-knight/servicing-promise-to-pay-example/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Black Knight — jsonschema rules](https://apis.io/rules/black-knight/black-knight-jsonschema-spectral-rules/)
+- [Black Knight API Rules](https://apis.io/rules/black-knight/black-knight-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Black Knight Domain Security](https://apis.io/security/black-knight/black-knight-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Black Knight Plans Pricing](https://apis.io/plans/black-knight/black-knight-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Black Knight Rate Limits](https://apis.io/rate-limits/black-knight/black-knight-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Black Knight Finops](https://apis.io/finops/black-knight/black-knight-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mortgagetech.ice.com)
+- [Blog](https://mortgagetech.ice.com/blog)
+- [GitHub](https://github.com/ICEMortgageTechnology)
+
+## API Evangelist rating
+
+**Kin Score 28.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 33.2 |
+| Contract governance | 27.3 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 41.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 4.4** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/black-knight/](https://apis.io/providers/black-knight/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Black Knight: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/black-knight/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
